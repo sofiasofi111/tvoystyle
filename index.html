@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241a12">
+  <meta name="description" content="Перетяжка та ремонт м'яких меблів у Дніпрі. Безкоштовний виїзд майстра, понад 100 тканин, гарантія 2 роки.">
+  <title>Твій стиль — перетяжка м'яких меблів у Дніпрі</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #29231e;
+      --muted: #746b63;
+      --cream: #f6f2ed;
+      --paper: #fffdfb;
+      --line: #e6ded5;
+      --brown: #241a12;
+      --brown-soft: #38291f;
+      --accent: #c87543;
+      --accent-dark: #a8572f;
+      --radius: 20px;
+      --shadow: 0 16px 48px rgba(43, 31, 22, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    .wrap { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+    .section { padding: 94px 0; }
+    .section--paper { background: var(--paper); }
+    .section--dark { background: var(--brown); color: #fff; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 24px; height: 1px; background: currentColor; content: ""; }
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+    .section-heading h2 {
+      margin: 0 0 13px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+    .section-heading p { max-width: 680px; margin: 0 auto; color: var(--muted); }
+    .section--dark .section-heading p { color: #c5b7aa; }
+    .button {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      transition: background .2s ease, transform .2s ease, border-color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--accent-dark); }
+    .button--outline { border-color: rgba(255,255,255,.4); background: transparent; }
+    .button--outline:hover { border-color: var(--accent); background: rgba(255,255,255,.08); }
+    .button--small { min-height: 42px; padding: 9px 16px; font-size: 14px; }
+
+    .hero {
+      position: relative;
+      min-height: 810px;
+      overflow: hidden;
+      background: var(--brown) url("assets/hero.jpg") center 52% / cover no-repeat;
+      color: #fff;
+    }
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(36,26,18,.94) 0%, rgba(36,26,18,.78) 56%, rgba(36,26,18,.62) 100%),
+        linear-gradient(0deg, rgba(36,26,18,.9), transparent 50%);
+      content: "";
+    }
+    .site-header {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      width: min(1420px, calc(100% - 52px));
+      min-height: 92px;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+      gap: 28px;
+    }
+    .brand { flex: 0 0 auto; font-size: 27px; font-weight: 800; letter-spacing: -.04em; }
+    .brand span { color: var(--accent); }
+    .nav { display: flex; align-items: center; justify-content: center; gap: clamp(14px, 2vw, 29px); }
+    .nav a { color: #f5eee7; font-size: 14px; transition: color .2s ease; }
+    .nav a:hover { color: #e59a69; }
+    .header-phones { display: grid; flex: 0 0 auto; gap: 1px; text-align: right; font-weight: 700; line-height: 1.4; }
+    .header-phones a { white-space: nowrap; }
+    .menu-toggle { display: none; border: 0; background: transparent; color: #fff; font-size: 27px; }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 590px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      margin-bottom: 27px;
+      padding: 8px 17px;
+      border: 1px solid rgba(200,117,67,.62);
+      border-radius: 30px;
+      color: #d58a5c;
+      font-size: 13px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      max-width: 880px;
+      margin: 0 0 23px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+    }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-copy { max-width: 730px; margin: 0; color: #e6ddd4; font-size: clamp(17px, 1.8vw, 21px); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 38px; }
+    .stats {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding-bottom: 30px;
+    }
+    .stat {
+      min-height: 116px;
+      padding: 20px 24px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 18px;
+      background: rgba(255,255,255,.09);
+      backdrop-filter: blur(8px);
+    }
+    .stat strong { display: block; color: var(--accent); font-size: 30px; line-height: 1.2; }
+    .stat span { color: #ded3c9; font-size: 14px; }
+
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .benefit {
+      min-height: 210px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 7px 25px rgba(43,31,22,.035);
+    }
+    .benefit-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: #f4e3d7;
+      color: var(--accent-dark);
+      font-size: 21px;
+    }
+    .benefit h3 { margin: 0 0 8px; font-size: 19px; }
+    .benefit p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .about-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 48px; align-items: start; }
+    .about-copy h2 { margin: 0 0 18px; font-size: clamp(32px, 4vw, 45px); line-height: 1.15; letter-spacing: -.035em; }
+    .about-copy p { color: #60574f; }
+    .company-card { padding: 30px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
+    .company-card h3 { margin: 0 0 21px; font-size: 20px; }
+    .company-card dl { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8px 14px; margin: 0 0 22px; font-size: 14px; }
+    .company-card dt { color: var(--muted); }
+    .company-card dd { margin: 0; font-weight: 600; }
+    .company-phones { display: grid; gap: 5px; margin-bottom: 18px; font-weight: 700; }
+    .services-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 24px; margin: 45px 0 0; padding: 0; list-style: none; }
+    .services-list li { display: flex; gap: 11px; align-items: flex-start; }
+    .services-list li::before { color: var(--accent); font-weight: 800; content: "✓"; }
+    .service-link { padding: 0; border: 0; background: transparent; color: inherit; text-align: left; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .2s ease, text-decoration-color .2s ease; }
+    .service-link:hover, .service-link:focus-visible { color: var(--accent-dark); text-decoration-color: currentColor; }
+    .service-dialog { width: min(600px, calc(100% - 32px)); max-height: min(85vh, 720px); padding: 0; overflow: auto; border: 0; border-radius: var(--radius); background: var(--paper); color: var(--ink); box-shadow: 0 24px 80px rgba(0,0,0,.28); }
+    .service-dialog::backdrop { background: rgba(27,20,15,.68); backdrop-filter: blur(3px); }
+    .service-dialog-content { padding: clamp(24px, 5vw, 38px); }
+    .service-dialog-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .service-dialog h2 { margin: 0 0 15px; font-size: clamp(25px, 5vw, 34px); line-height: 1.15; }
+    .service-dialog p { color: var(--muted); }
+    .service-dialog-description { margin: 0 0 22px; }
+    .service-dialog h3 { margin: 22px 0 10px; font-size: 17px; }
+    .service-dialog-steps { display: grid; gap: 10px; margin: 0; padding-left: 23px; color: var(--muted); }
+    .service-dialog-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .service-dialog-close { display: grid; width: 40px; height: 40px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font-size: 24px; }
+    .service-dialog-close:hover { border-color: var(--accent); color: var(--accent-dark); }
+    .service-dialog .button--outline { border-color: var(--line); color: var(--ink); }
+    .service-dialog .button--outline:hover { border-color: var(--accent); background: #f7eee8; color: var(--accent-dark); }
+    .services-hint { margin: 8px 0 -25px; color: var(--muted); font-size: 14px; }
+    .about-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 38px; }
+    .about-detail { padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+    .about-detail h3 { margin: 0 0 12px; font-size: 19px; }
+    .about-detail p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .about-detail p:last-child { margin-bottom: 0; }
+    .about-detail ul { display: grid; gap: 8px; margin: 0; padding-left: 20px; color: var(--muted); font-size: 14px; }
+
+    .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin: 0 auto 32px; }
+    .filter {
+      padding: 10px 17px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: transparent;
+      color: #5f564e;
+      font-size: 14px;
+      transition: all .2s ease;
+    }
+    .filter:hover, .filter[aria-pressed="true"] { border-color: var(--brown); background: var(--brown); color: #fff; }
+    .catalog-top { display: flex; align-items: end; justify-content: space-between; margin-bottom: 30px; }
+    .catalog-top .section-heading { margin: 0; text-align: left; }
+    .catalog-top .section-heading p { margin: 0; }
+    .catalog-count { padding-bottom: 8px; color: var(--muted); font-size: 14px; }
+    .products { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--paper);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .product-card[hidden], .fabric-card[hidden] { display: none; }
+    .product-photo { position: relative; overflow: hidden; aspect-ratio: 1.35; background: #e6ded5; }
+    .product-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .product-card:hover .product-photo img { transform: scale(1.045); }
+    .badge {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      padding: 5px 10px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .badge--time { right: 12px; left: auto; background: rgba(36,26,18,.77); }
+    .product-info { padding: 18px; }
+    .product-info h3 { margin: 0 0 6px; font-size: 18px; line-height: 1.3; }
+    .product-info p { min-height: 66px; margin: 0 0 16px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .product-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .product-price { font-weight: 800; white-space: nowrap; }
+
+    .fabric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .fabric-card { overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; }
+    .fabric-card img { width: 100%; height: 210px; object-fit: cover; }
+    .fabric-info { padding: 20px; }
+    .fabric-info h3 { margin: 0 0 6px; font-size: 19px; }
+    .fabric-info p { min-height: 50px; margin: 0; color: var(--muted); font-size: 14px; }
+    .fabric-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+    .fabric-tags span { padding: 4px 9px; border-radius: 30px; background: #f3eee8; color: #62574f; font-size: 11px; }
+    .fabric-price { margin-top: 10px; color: var(--accent-dark); font-size: 14px; font-weight: 700; }
+
+    .process-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 60px; align-items: center; }
+    .process-copy h2 { margin: 0 0 12px; font-size: clamp(32px, 4vw, 46px); line-height: 1.12; }
+    .process-copy > p { margin: 0 0 30px; color: #c5b7aa; }
+    .steps { display: grid; gap: 20px; margin: 0; padding: 0; list-style: none; }
+    .steps li { display: grid; grid-template-columns: 42px 1fr; gap: 15px; align-items: start; }
+    .step-number { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid var(--accent); border-radius: 50%; color: #e29a6d; font-weight: 700; }
+    .steps h3 { margin: 0 0 4px; font-size: 17px; }
+    .steps p { margin: 0; color: #c5b7aa; font-size: 14px; }
+    .process-image { position: relative; }
+    .process-image img { width: 100%; min-height: 460px; border-radius: var(--radius); object-fit: cover; }
+    .image-note { position: absolute; right: 18px; bottom: 18px; left: 18px; padding: 15px 18px; border: 1px solid rgba(255,255,255,.2); border-radius: 12px; background: rgba(36,26,18,.78); color: #fff; backdrop-filter: blur(8px); font-size: 14px; }
+
+    .price-wrap { overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; }
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table th, .price-table td { padding: 17px 23px; border-bottom: 1px solid var(--line); text-align: left; }
+    .price-table th { background: #efe7df; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+    .price-table td:last-child { color: var(--accent-dark); font-weight: 800; white-space: nowrap; }
+    .price-table tbody tr:last-child td { border-bottom: 0; }
+    .price-note { margin: 17px 0 0; color: var(--muted); font-size: 14px; }
+
+    .review-top { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 32px; }
+    .review-top .section-heading { margin: 0; text-align: left; }
+    .review-top .section-heading p { margin: 0; }
+    .rating { min-width: 180px; text-align: right; }
+    .rating strong { display: block; font-size: 42px; line-height: 1; }
+    .stars { color: #e1a354; letter-spacing: .1em; }
+    .rating span { color: var(--muted); font-size: 13px; }
+    .reviews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .review {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .review-rating { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 13px; }
+    .review-rating strong { color: var(--accent-dark); font-size: 13px; }
+    .review-rating time { color: var(--muted); font-size: 12px; }
+    .review blockquote { margin: 0 0 18px; color: #4d443d; font-size: 14px; }
+    .review-person { display: flex; align-items: center; gap: 11px; }
+    .avatar { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; background: #ead7c8; color: #7c4b31; font-size: 12px; font-weight: 800; }
+    .review-person strong, .review-person small { display: block; }
+    .review-person strong { font-size: 13px; }
+    .review-person small { color: var(--muted); font-size: 11px; }
+    .review-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 18px; padding: 0; list-style: none; }
+    .review-tags li { padding: 5px 9px; border-radius: 20px; background: #f4eee8; color: #62574f; font-size: 11px; }
+    .review-reply { margin-top: auto; padding: 13px 15px; border-left: 3px solid var(--accent); border-radius: 0 9px 9px 0; background: #f8f3ee; }
+    .review-reply strong { display: block; margin-bottom: 4px; font-size: 12px; }
+    .review-reply time { margin-left: 5px; color: var(--muted); font-size: 11px; font-weight: 400; }
+    .review-reply p { margin: 0; color: #5f564e; font-size: 13px; }
+
+    .faq-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: start; }
+    .faq-intro h2 { margin: 0 0 12px; font-size: clamp(32px, 4vw, 44px); line-height: 1.15; }
+    .faq-intro p { color: var(--muted); }
+    .faq-list { display: grid; gap: 9px; }
+    .faq-item { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .faq-question { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 15px; padding: 18px 20px; border: 0; background: transparent; color: var(--ink); font-weight: 700; text-align: left; }
+    .faq-question span:last-child { color: var(--accent); font-size: 21px; transition: transform .2s ease; }
+    .faq-question[aria-expanded="true"] span:last-child { transform: rotate(45deg); }
+    .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
+    .faq-answer > div { overflow: hidden; }
+    .faq-answer p { margin: 0; padding: 0 20px 19px; color: var(--muted); font-size: 14px; }
+    .faq-question[aria-expanded="true"] + .faq-answer { grid-template-rows: 1fr; }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 52px; align-items: start; }
+    .contact-info h2 { margin: 0 0 13px; font-size: clamp(32px, 4vw, 46px); line-height: 1.12; }
+    .contact-info > p { max-width: 620px; color: #c5b7aa; }
+    .contact-list { display: grid; gap: 20px; margin: 32px 0 0; padding: 0; list-style: none; }
+    .contact-list li { display: grid; grid-template-columns: 42px 1fr; gap: 14px; }
+    .contact-icon { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgba(200,117,67,.5); border-radius: 50%; color: #e29a6d; }
+    .contact-list strong { display: block; margin-bottom: 3px; color: #e2a176; font-size: 13px; }
+    .contact-list span, .contact-list a { color: #eee4da; }
+    .contact-list p { margin: 3px 0 0; color: #b8a99c; font-size: 13px; }
+    .contact-form { padding: 30px; border-radius: var(--radius); background: #fff; color: var(--ink); box-shadow: var(--shadow); }
+    .contact-form h3 { margin: 0 0 20px; font-size: 23px; }
+    .field { display: grid; gap: 6px; margin-bottom: 14px; }
+    .field label { font-size: 13px; font-weight: 700; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 46px; padding: 11px 13px; border: 1px solid #ddd4ca; border-radius: 7px; outline: 0; background: #fff; color: var(--ink); }
+    .field textarea { min-height: 94px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(200,117,67,.13); }
+    .consent { display: flex; align-items: flex-start; gap: 9px; margin: 12px 0 17px; color: var(--muted); font-size: 12px; }
+    .consent input { margin-top: 5px; accent-color: var(--accent); }
+    .contact-form .button { width: 100%; }
+    .form-note { min-height: 22px; margin: 12px 0 0; color: var(--accent-dark); font-size: 13px; }
+
+    .site-footer { padding: 54px 0 23px; background: #19120d; color: #eee4da; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 50px; padding-bottom: 38px; }
+    .footer-brand { margin-bottom: 11px; font-size: 24px; font-weight: 800; }
+    .footer-brand span { color: var(--accent); }
+    .footer-grid p { max-width: 400px; margin: 0; color: #b8a99c; font-size: 14px; }
+    .footer-grid h3 { margin: 0 0 13px; font-size: 15px; }
+    .footer-links { display: grid; gap: 7px; color: #d5c9be; font-size: 13px; }
+    .footer-links a:hover { color: #e49a6b; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); color: #a99a8e; font-size: 12px; }
+    .back-top {
+      position: fixed;
+      z-index: 10;
+      right: 24px;
+      bottom: 22px;
+      display: grid;
+      width: 54px;
+      height: 54px;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: #e87c67;
+      color: #fff;
+      font-size: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: .2s ease;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .help-bubble { position: fixed; z-index: 8; right: 26px; bottom: 90px; display: grid; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: #e87c67; color: #fff; font-size: 24px; box-shadow: 0 8px 22px rgba(0,0,0,.16); }
+
+    @media (max-width: 1050px) {
+      .site-header { gap: 18px; }
+      .nav { gap: 12px; }
+      .nav a { font-size: 12px; }
+      .header-phones { font-size: 13px; }
+      .products { grid-template-columns: repeat(3, 1fr); }
+      .reviews { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 70px; }
+      .wrap { width: min(100% - 36px, 560px); }
+      .section { padding: 68px 0; }
+      .hero { min-height: 770px; background-position: 58% center; }
+      .site-header { width: calc(100% - 36px); min-height: 76px; }
+      .brand { font-size: 24px; }
+      .menu-toggle { display: block; margin-left: auto; }
+      .nav {
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        padding: 10px 16px;
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: 12px;
+        background: #291e16;
+      }
+      .nav.open { display: grid; }
+      .nav a { padding: 7px 3px; font-size: 15px; }
+      .header-phones { display: none; }
+      .hero-content { min-height: 520px; padding-top: 10px; }
+      .hero h1 { font-size: clamp(39px, 10vw, 58px); }
+      .hero-copy { font-size: 17px; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 10px; padding-bottom: 22px; }
+      .stat { min-height: 99px; padding: 15px; }
+      .stat strong { font-size: 25px; }
+      .stat span { font-size: 12px; }
+      .benefits { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .benefit { min-height: 0; padding: 20px; }
+      .benefit-icon { width: 39px; height: 39px; margin-bottom: 12px; }
+      .benefit h3 { font-size: 16px; }
+      .benefit p { font-size: 13px; }
+      .about-grid, .process-grid, .faq-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+      .about-details { grid-template-columns: 1fr; }
+      .services-list { grid-template-columns: 1fr 1fr; gap: 10px 15px; font-size: 14px; }
+      .catalog-top { display: block; }
+      .catalog-count { margin-top: 10px; }
+      .products { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+      .product-info { padding: 14px; }
+      .product-info h3 { font-size: 15px; }
+      .product-info p { min-height: 82px; font-size: 12px; }
+      .product-bottom { align-items: flex-start; flex-direction: column; }
+      .fabric-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .fabric-card img { height: 150px; }
+      .fabric-info { padding: 14px; }
+      .fabric-info h3 { font-size: 16px; }
+      .fabric-info p { min-height: 68px; font-size: 12px; }
+      .process-image img { min-height: 320px; max-height: 420px; }
+      .price-table th, .price-table td { padding: 13px 12px; font-size: 13px; }
+      .review-top { align-items: flex-start; flex-direction: column; }
+      .rating { text-align: left; }
+      .reviews { grid-template-columns: 1fr; gap: 12px; }
+      .review { padding: 19px; }
+      .contact-form { padding: 23px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; gap: 4px; }
+    }
+    @media (max-width: 410px) {
+      .wrap { width: calc(100% - 28px); }
+      .hero-actions { align-items: stretch; flex-direction: column; width: 100%; }
+      .hero-actions .button { width: 100%; }
+      .benefits { grid-template-columns: 1fr; }
+      .products { grid-template-columns: 1fr; }
+      .product-info p { min-height: 0; }
+      .fabric-grid { grid-template-columns: 1fr; }
+      .fabric-card img { height: 210px; }
+      .fabric-info p { min-height: 0; }
+      .services-list { grid-template-columns: 1fr; }
+      .company-card { padding: 23px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="vb-k7x">
+      <header class="site-header">
+        <a class="brand" href="#vb-k7x" aria-label="Твій стиль — на головну">Твій <span>стиль</span></a>
+        <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">☰</button>
+        <nav class="nav" aria-label="Основна навігація">
+          <a href="#vb-n4b">Про нас</a>
+          <a href="#vb-c9r">Послуги</a>
+          <a href="#vb-f2w">Тканини</a>
+          <a href="#vb-s8q">Ціни</a>
+          <a href="#vb-c9r">Каталог</a>
+          <a href="#vb-h1y">Питання</a>
+          <a href="#vb-m8j">Контакти</a>
+        </nav>
+        <div class="header-phones">
+          <a href="tel:+380985479865">+380 (98) 547-98-65</a>
+          <a href="tel:+380959087508">+380 (95) 908-75-08</a>
+        </div>
+      </header>
+      <div class="wrap hero-content">
+        <span class="hero-kicker">Майстерня з перетяжки · Дніпро</span>
+        <h1>Перетяжка м'яких меблів <em>«Твій стиль»</em> — нове життя вашого дивана</h1>
+        <p class="hero-copy">Оновлюємо дивани, крісла, стільці та кухонні куточки. Майстер приїздить до вас додому зі зразками тканин, знімає мірки та розраховує вартість на місці — безкоштовно.</p>
+        <div class="hero-actions">
+          <a class="button" href="#vb-m8j">Розрахувати вартість</a>
+          <a class="button button--outline" href="#vb-c9r">Каталог послуг</a>
+        </div>
+      </div>
+      <div class="wrap stats" aria-label="Показники майстерні">
+        <div class="stat"><strong>12 років</strong><span>на ринку перетяжки</span></div>
+        <div class="stat"><strong>5 000+</strong><span>оновлених меблів</span></div>
+        <div class="stat"><strong>2 роки</strong><span>гарантії на роботу</span></div>
+        <div class="stat"><strong>1–3 дні</strong><span>типовий термін виконання</span></div>
+      </div>
+    </section>
+
+    <section class="section section--paper" aria-labelledby="benefits-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Наші переваги</span>
+          <h2 id="benefits-title">Чому обирають «Твій стиль»</h2>
+          <p>Працюємо як для себе: чесний кошторис, зрозумілі терміни та матеріали, які витримують щоденне навантаження.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit"><span class="benefit-icon" aria-hidden="true">⌂</span><h3>Виїзд майстра додому</h3><p>Приїздимо зі зразками понад 100 тканин, знімаємо мірки та погоджуємо кошторис на місці. По Дніпру виїзд безкоштовний.</p></article>
+          <article class="benefit"><span class="benefit-icon" aria-hidden="true">✓</span><h3>Гарантія 2 роки</h3><p>На всі роботи та використані матеріали даємо письмову гарантію. Якщо щось піде не так — виправляємо безкоштовно.</p></article>
+          <article class="benefit"><span class="benefit-icon" aria-hidden="true">◷</span><h3>Термін 1–3 дні</h3><p>Більшість робіт виконуємо за 1–3 дні. Термін фіксуємо в кошторисі та дотримуємось його.</p></article>
+          <article class="benefit"><span class="benefit-icon" aria-hidden="true">⌘</span><h3>Власна майстерня</h3><p>Працюємо без посередників: закрій, пошиття та монтаж виконують наші майстри. Тому ціна нижча, а якість — під нашим контролем.</p></article>
+          <article class="benefit"><span class="benefit-icon" aria-hidden="true">↗</span><h3>Доставка під ключ</h3><p>Забираємо меблі, веземо в майстерню, привозимо та встановлюємо на місце. Вам не доведеться нічого піднімати.</p></article>
+          <article class="benefit"><span class="benefit-icon" aria-hidden="true">₴</span><h3>Зручна оплата</h3><p>Можна розрахуватися готівкою після виконання роботи або безготівковим переказом на рахунок.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vb-n4b">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-copy">
+            <span class="eyebrow">Майстерня у Дніпрі</span>
+            <h2>Про нас</h2>
+            <p>Майстерня «Твій стиль» спеціалізується на перетяжці та ремонті м'яких меблів у Дніпрі. Працюємо у цій сфері понад 12 років і підбираємо рішення під стан меблів, побажання та бюджет клієнта.</p>
+            <p>Перетяжка допомагає оновити улюблені меблі й часто обходиться дешевше за придбання нового гарнітура. Виконуємо замовлення різної складності: від заміни оббивки до ремонту внутрішніх деталей. Можна обрати тканину та її колір із зразків у каталозі.</p>
+            <p>Вартість і терміни залежать від виду меблів, обсягу робіт і вибраних матеріалів. Зателефонуйте, щоб обговорити замовлення та узгодити зручні деталі.</p>
+          </div>
+          <aside class="company-card">
+            <h3>Інформація про компанію</h3>
+            <dl><dt>Назва</dt><dd>Перетяжка меблів в Дніпрі, «Твій стиль»</dd><dt>Тип компанії</dt><dd>Виробник · Компанія, що надає послуги</dd></dl>
+            <div class="company-phones"><a href="tel:+380985479865">+380 (98) 547-98-65</a><a href="tel:+380959087508">+380 (95) 908-75-08</a></div>
+            <a class="button button--small" href="tel:+380985479865">Зателефонувати</a>
+          </aside>
+        </div>
+        <div class="about-details">
+          <article class="about-detail">
+            <h3>Що можна відремонтувати або замінити</h3>
+            <ul>
+              <li>оббивку та внутрішні меблеві наповнювачі;</li>
+              <li>застарілі або несправні механізми;</li>
+              <li>пружинні блоки та дрібні деталі;</li>
+              <li>виконати повну перетяжку й відновлення меблів.</li>
+            </ul>
+          </article>
+          <article class="about-detail">
+            <h3>Варіанти оплати</h3>
+            <p>Оберіть зручний спосіб оплати замовлення:</p>
+            <ul>
+              <li>готівкою після виконання роботи;</li>
+              <li>безготівковим переказом на банківський рахунок, наданий менеджером.</li>
+            </ul>
+          </article>
+        </div>
+        <h3 style="margin:42px 0 0;font-size:21px">Наші послуги</h3>
+        <p class="services-hint">Натисніть на послугу, щоб дізнатися, як відбувається робота.</p>
+        <ul class="services-list" aria-label="Послуги — натисніть, щоб дізнатися подробиці">
+          <li><button class="service-link" type="button" data-service="upholstery">Перетяжка м'яких меблів</button></li><li><button class="service-link" type="button" data-service="leather">Оббивка меблів шкірою</button></li><li><button class="service-link" type="button" data-service="repair">Ремонт м'яких меблів</button></li>
+          <li><button class="service-link" type="button" data-service="restoration">Реставрація меблів</button></li><li><button class="service-link" type="button" data-service="hairdresser-chair-upholstery">Перетяжка перукарських крісел</button></li><li><button class="service-link" type="button" data-service="office-chair-upholstery">Перетяжка офісних крісел</button></li>
+          <li><button class="service-link" type="button" data-service="chair-upholstery">Оббивка стільців</button></li><li><button class="service-link" type="button" data-service="hairdresser-chair">Виготовлення перукарських крісел</button></li><li><button class="service-link" type="button" data-service="massage-table">Оббивка масажного столу</button></li>
+          <li><button class="service-link" type="button" data-service="covers">Пошиття чохлів і подушок</button></li><li><button class="service-link" type="button" data-service="auto">Перетяжка автомобільних крісел</button></li><li><button class="service-link" type="button" data-service="springs">Заміна пружинних блоків</button></li>
+          <li><button class="service-link" type="button" data-service="foam">Заміна поролону</button></li><li><button class="service-link" type="button" data-service="mattress">Виготовлення матраців</button></li><li><button class="service-link" type="button" data-service="mattress-repair">Ремонт матраців</button></li>
+          <li><button class="service-link" type="button" data-service="folding-bed">Розкладачки французькі під замовлення</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <dialog class="service-dialog" id="service-dialog" aria-labelledby="service-dialog-title" aria-describedby="service-dialog-description">
+      <div class="service-dialog-content">
+        <div class="service-dialog-top">
+          <div>
+            <span class="eyebrow">Послуги майстерні</span>
+            <h2 id="service-dialog-title"></h2>
+          </div>
+          <button class="service-dialog-close" type="button" aria-label="Закрити вікно">×</button>
+        </div>
+        <p class="service-dialog-description" id="service-dialog-description"></p>
+        <h3>Як відбувається робота</h3>
+        <ol class="service-dialog-steps" id="service-dialog-steps"></ol>
+        <div class="service-dialog-actions">
+          <button class="button" id="service-dialog-order" type="button">Обговорити замовлення</button>
+          <a class="button button--outline" href="tel:+380985479865">Зателефонувати</a>
+        </div>
+      </div>
+    </dialog>
+
+    <section class="section section--paper" id="vb-c9r">
+      <div class="wrap">
+        <div class="catalog-top">
+          <div class="section-heading">
+            <span class="eyebrow">Послуги майстерні</span>
+            <h2>Каталог перетяжки</h2>
+            <p>Оберіть тип меблів — покажемо варіанти робіт та орієнтовні ціни. Точний розрахунок майстер зробить після огляду.</p>
+          </div>
+          <span class="catalog-count"><strong id="product-count">24 позиції</strong></span>
+        </div>
+        <div class="filters" role="group" aria-label="Категорії товарів" data-filter-group="products">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Усі товари</button>
+          <button class="filter" type="button" data-filter="upholstery" aria-pressed="false">Перетяжка меблів</button>
+          <button class="filter" type="button" data-filter="repair" aria-pressed="false">Ремонт</button>
+          <button class="filter" type="button" data-filter="office" aria-pressed="false">Офісні меблі</button>
+          <button class="filter" type="button" data-filter="mattresses" aria-pressed="false">Матраци</button>
+          <button class="filter" type="button" data-filter="auto" aria-pressed="false">Автомобілі</button>
+          <button class="filter" type="button" data-filter="custom" aria-pressed="false">Меблі на замовлення</button>
+        </div>
+        <div class="products">
+          <article class="product-card" data-category="repair"><div class="product-photo"><img src="assets/catalog/catalog-01.jpg" alt="Пружинний блок для меблів" loading="lazy"></div><div class="product-info"><h3>Пружинний блок</h3><p>Пружинний блок для ремонту та відновлення м'яких меблів.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Пружинний блок">Замовити</button></div></div></article>
+          <article class="product-card" data-category="auto"><div class="product-photo"><img src="assets/catalog/catalog-02.jpg" alt="Перетяжка салону автомобіля" loading="lazy"></div><div class="product-info"><h3>Перетяжка салону авто</h3><p>Перетяжка та оновлення салону автомобіля.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка салону авто">Замовити</button></div></div></article>
+          <article class="product-card" data-category="custom"><div class="product-photo"><img src="assets/catalog/catalog-03.jpg" alt="Модульні меблі" loading="lazy"></div><div class="product-info"><h3>Модульні меблі</h3><p>Виготовлення та оновлення модульних меблів.</p><div class="product-bottom"><span class="product-price">від 2 500 ₴</span><button class="button button--small order-button" type="button" data-item="Модульні меблі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="repair"><div class="product-photo"><img src="assets/catalog/catalog-04.jpg" alt="Заміна пружинних блоків" loading="lazy"></div><div class="product-info"><h3>Заміна пружинних блоків</h3><p>Заміна пружинних блоків у м'яких меблях.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Заміна пружинних блоків">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-05.jpg" alt="Перетяжка елітних меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка елітних меблів</h3><p>Оновлення оббивки м'яких меблів.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка елітних меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="office"><div class="product-photo"><img src="assets/catalog/catalog-06.jpg" alt="Модульні офісні меблі" loading="lazy"></div><div class="product-info"><h3>Модульні офісні меблі</h3><p>Модульні рішення для офісних приміщень.</p><div class="product-bottom"><span class="product-price">від 3 500 ₴</span><button class="button button--small order-button" type="button" data-item="Модульні офісні меблі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="mattresses"><div class="product-photo"><img src="assets/catalog/catalog-07.jpg" alt="Матрац на замовлення" loading="lazy"></div><div class="product-info"><h3>Матрац на замовлення</h3><p>Виготовлення матраца за індивідуальним замовленням.</p><div class="product-bottom"><span class="product-price">від 1 000 ₴</span><button class="button button--small order-button" type="button" data-item="Матрац на замовлення">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-08.jpg" alt="Перетяжка меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів</h3><p>Оновлення оббивки м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 8 000 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-09.jpg" alt="Перетяжка меблів у Дніпрі" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів у Дніпрі</h3><p>Послуги з перетяжки м'яких меблів у місті.</p><div class="product-bottom"><span class="product-price">від 5 000 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів у Дніпрі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="repair"><div class="product-photo"><img src="assets/catalog/catalog-10.jpg" alt="Реставрація м'яких меблів" loading="lazy"></div><div class="product-info"><h3>Реставрація м'яких меблів</h3><p>Відновлення та ремонт м'яких меблів.</p><div class="product-bottom"><span class="product-price">Ціну уточнюйте</span><button class="button button--small order-button" type="button" data-item="Реставрація м'яких меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-11.jpg" alt="Перетяжка елітних меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка елітних меблів</h3><p>Оновлення оббивки меблів за індивідуальним запитом.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка елітних меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-12.jpg" alt="Перетяжка меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів</h3><p>Перетяжка та оновлення оббивного матеріалу.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-13.jpg" alt="Перетяжка елітних меблів у Дніпрі" loading="lazy"></div><div class="product-info"><h3>Перетяжка елітних меблів у Дніпрі</h3><p>Перетяжка м'яких меблів.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка елітних меблів у Дніпрі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-14.jpg" alt="Перетяжка меблів люкс" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів люкс</h3><p>Оновлення оббивки меблів.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів люкс">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-15.jpg" alt="Перетяжка елітних меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка елітних меблів</h3><p>Перетяжка та відновлення оббивки меблів.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка елітних меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-16.jpg" alt="Перетяжка елітних меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка елітних меблів</h3><p>Перетяжка та відновлення оббивки меблів.</p><div class="product-bottom"><span class="product-price">1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка елітних меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-17.jpg" alt="Перетяжка елітних меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка елітних меблів</h3><p>Оновлення оббивки м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка елітних меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-18.jpg" alt="М'які меблі" loading="lazy"></div><div class="product-info"><h3>М'які меблі</h3><p>Перетяжка та оновлення м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="М'які меблі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-19.jpg" alt="Перетяжка меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів</h3><p>Оновлення оббивки м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-20.jpg" alt="Перетяжка меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів</h3><p>Перетяжка та ремонт м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів">Замовити</button></div></div></article>
+          <article class="product-card" data-category="repair"><div class="product-photo"><img src="assets/catalog/catalog-21.jpg" alt="Ремонт ліжка" loading="lazy"></div><div class="product-info"><h3>Ремонт ліжка</h3><p>Ремонт м'якого ліжка та його оббивки.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Ремонт ліжка">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-22.jpg" alt="Перетяжка меблів у Дніпрі" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів у Дніпрі</h3><p>Послуги з перетяжки м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 2 000 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів у Дніпрі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="upholstery"><div class="product-photo"><img src="assets/catalog/catalog-23.jpg" alt="Перетяжка меблів у Дніпрі" loading="lazy"></div><div class="product-info"><h3>Перетяжка меблів у Дніпрі</h3><p>Послуги з перетяжки м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 1 500 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка меблів у Дніпрі">Замовити</button></div></div></article>
+          <article class="product-card" data-category="repair"><div class="product-photo"><img src="assets/catalog/catalog-24.jpg" alt="Перетяжка та ремонт м'яких меблів" loading="lazy"></div><div class="product-info"><h3>Перетяжка та ремонт м'яких меблів</h3><p>Перетяжка та ремонт м'яких меблів.</p><div class="product-bottom"><span class="product-price">від 1 ₴</span><button class="button button--small order-button" type="button" data-item="Перетяжка та ремонт м'яких меблів">Замовити</button></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vb-f2w">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Зразки матеріалів</span>
+          <h2>Каталог тканин для перетяжки</h2>
+          <p>Зразки оббивних матеріалів, доступних для перетяжки меблів. Остаточний вибір можна зробити за зразками тканини.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Фільтр тканин" data-filter-group="fabrics">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Усі тканини</button>
+          <button class="filter" type="button" data-filter="jacquard" aria-pressed="false">Жакард</button>
+          <button class="filter" type="button" data-filter="velvet" aria-pressed="false">Вельвет і велюр</button>
+          <button class="filter" type="button" data-filter="matting" aria-pressed="false">Рогожка</button>
+          <button class="filter" type="button" data-filter="leatherette" aria-pressed="false">Штучна шкіра</button>
+        </div>
+        <div class="fabric-grid">
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-01.jpg" alt="Зразок жакарду, 25 000 циклів" loading="lazy"><div class="fabric-info"><h3>Жакард · 25 000 циклів</h3><p>100% поліестер. Легкий догляд допомагає довше зберігати вигляд тканини.</p><div class="fabric-price">Тест на зносостійкість — 25 000 циклів</div></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-02.jpg" alt="Зразок жакарду, 30 000 циклів" loading="lazy"><div class="fabric-info"><h3>Жакард · 30 000 циклів</h3><p>100% поліестер. Тканина підходить для меблевих виробів з подушками.</p><div class="fabric-price">Тест на зносостійкість — 30 000 циклів</div></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-03.jpg" alt="Зразок жакарду, 35 000 циклів" loading="lazy"><div class="fabric-info"><h3>Жакард · 35 000 циклів</h3><p>100% поліестер. Легкий догляд допомагає довше зберігати вигляд тканини.</p><div class="fabric-price">Тест на зносостійкість — 35 000 циклів</div></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-04.jpg" alt="Зразок жакарду, 40 000 циклів" loading="lazy"><div class="fabric-info"><h3>Жакард · 40 000 циклів</h3><p>100% поліестер. Тканина підходить для меблевих виробів з подушками.</p><div class="fabric-price">Тест на зносостійкість — 40 000 циклів</div></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-05.jpg" alt="Жакард, зразок тканини 5" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-06.jpg" alt="Жакард, зразок тканини 6" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-07.jpg" alt="Жакард, зразок тканини 7" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-08.jpg" alt="Жакард, зразок тканини 8" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-09.jpg" alt="Жакард, зразок тканини 9" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-10.jpg" alt="Жакард, зразок тканини 10" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-11.jpg" alt="Жакард, зразок тканини 11" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="jacquard"><img src="assets/fabrics/fabric-12.jpg" alt="Жакард, зразок тканини 12" loading="lazy"><div class="fabric-info"><h3>Жакард</h3><p>100% поліестер. Зразок тканини для оббивки меблів.</p></div></article>
+          <article class="fabric-card" data-tags="velvet"><img src="assets/fabrics/fabric-13.jpg" alt="Вельвет, штучний оксамит" loading="lazy"><div class="fabric-info"><h3>Вельвет · штучний оксамит</h3><p>100% поліестер, флісова основа для додаткової міцності. Підходить для меблів із навантаженням.</p><div class="fabric-price">Тест на зносостійкість — 25 000 циклів</div></div></article>
+          <article class="fabric-card" data-tags="matting"><img src="assets/fabrics/fabric-14.jpg" alt="Рогожка, 26 000 циклів" loading="lazy"><div class="fabric-info"><h3>Рогожка</h3><p>100% поліестер. Для повсякденного використання; добре зберігає форму, легка у догляді.</p><div class="fabric-price">Тест на зносостійкість — 26 000 циклів</div></div></article>
+          <article class="fabric-card" data-tags="velvet"><img src="assets/fabrics/fabric-15.jpg" alt="Тканина Miss" loading="lazy"><div class="fabric-info"><h3>Miss</h3><p>Зразок тканини з каталогу оббивки.</p></div></article>
+          <article class="fabric-card" data-tags="leatherette"><img src="assets/fabrics/fabric-16.jpg" alt="Штучна шкіра Boom" loading="lazy"><div class="fabric-info"><h3>Boom · штучна шкіра</h3><p>Зразок оббивного матеріалу з колекції штучної шкіри.</p></div></article>
+          <article class="fabric-card" data-tags="leatherette"><img src="assets/fabrics/fabric-17.jpg" alt="Штучна шкіра Династія" loading="lazy"><div class="fabric-info"><h3>Династія · штучна шкіра</h3><p>Зразок оббивного матеріалу з колекції штучної шкіри.</p></div></article>
+          <article class="fabric-card" data-tags="leatherette"><img src="assets/fabrics/fabric-18.jpg" alt="Штучна шкіра Metropol" loading="lazy"><div class="fabric-info"><h3>Metropol · штучна шкіра</h3><p>Зразок оббивного матеріалу з колекції штучної шкіри.</p></div></article>
+          <article class="fabric-card" data-tags="matting"><img src="assets/fabrics/fabric-19.jpg" alt="Рогожка Arkadia" loading="lazy"><div class="fabric-info"><h3>Arkadia · рогожка</h3><p>Зразок тканини з колекції рогожки.</p></div></article>
+          <article class="fabric-card" data-tags="matting"><img src="assets/fabrics/fabric-20.jpg" alt="Рогожка Arno" loading="lazy"><div class="fabric-info"><h3>Arno · рогожка</h3><p>Зразок тканини з колекції рогожки.</p></div></article>
+          <article class="fabric-card" data-tags="matting"><img src="assets/fabrics/fabric-21.jpg" alt="Рогожка Como" loading="lazy"><div class="fabric-info"><h3>Como · рогожка</h3><p>Зразок тканини з колекції рогожки.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="wrap process-grid">
+        <div class="process-copy">
+          <span class="eyebrow">Крок за кроком</span>
+          <h2>Як відбувається перетяжка</h2>
+          <p>Прозорий процес без сюрпризів: ви завжди знаєте, на якому етапі ваші меблі та скільки коштує робота.</p>
+          <ol class="steps">
+            <li><span class="step-number">1</span><div><h3>Заявка або дзвінок</h3><p>Пишіть у месенджер або телефонуйте. Узгоджуємо зручний час виїзду майстра.</p></div></li>
+            <li><span class="step-number">2</span><div><h3>Виїзд та вибір тканини</h3><p>Майстер приїздить зі зразками оббивки, знімає мірки та розраховує кошторис на місці.</p></div></li>
+            <li><span class="step-number">3</span><div><h3>Підписання договору</h3><p>Фіксуємо матеріали, вартість і термін у договорі. Доставка в майстерню — за наш рахунок.</p></div></li>
+            <li><span class="step-number">4</span><div><h3>Робота в майстерні</h3><p>Розбираємо меблі, міняємо наповнювач і ремені, ремонтуємо каркас і механізми, шиємо новий чохол.</p></div></li>
+            <li><span class="step-number">5</span><div><h3>Доставка та оплата</h3><p>Привозимо, встановлюємо на місці, ви перевіряєте результат і лише потім оплачуєте.</p></div></li>
+          </ol>
+        </div>
+        <div class="process-image"><img src="assets/workshop.jpg" alt="Майстер перетяжки за роботою в майстерні" loading="lazy"><div class="image-note">Безкоштовний виїзд майстра по Дніпру. У Дніпропетровській області — за домовленістю.</div></div>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="vb-s8q">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Чесний кошторис</span>
+          <h2>Ціни на перетяжку</h2>
+          <p>Ціни й назви позицій перенесені з каталогу. Остаточну вартість уточнюйте телефоном.</p>
+        </div>
+        <div class="price-wrap">
+          <table class="price-table">
+            <thead><tr><th>Послуга</th><th>Орієнтовна ціна</th></tr></thead>
+            <tbody>
+              <tr><td>Перетяжка меблів</td><td>від 8 000 ₴</td></tr>
+              <tr><td>Перетяжка меблів у Дніпрі</td><td>від 5 000 ₴</td></tr>
+              <tr><td>Модульні меблі</td><td>від 2 500 ₴</td></tr>
+              <tr><td>Модульні офісні меблі</td><td>від 3 500 ₴</td></tr>
+              <tr><td>Матрац на замовлення</td><td>від 1 000 ₴</td></tr>
+              <tr><td>Перетяжка меблів у Дніпрі</td><td>від 2 000 ₴</td></tr>
+              <tr><td>Перетяжка меблів у Дніпрі</td><td>від 1 500 ₴</td></tr>
+              <tr><td>Реставрація м'яких меблів</td><td>Ціну уточнюйте</td></tr>
+              <tr><td>Інші позиції каталогу</td><td>1 ₴ у каталозі; уточнюйте</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="price-note">Для позицій, де у вітрині вказано 1 ₴, вартість роботи уточнюйте телефоном.</p>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap">
+        <div class="review-top">
+          <div class="section-heading">
+            <span class="eyebrow">Нам довіряють</span>
+            <h2>Відгуки клієнтів</h2>
+            <p>Відгуки про перетяжку меблів, якість роботи та обслуговування.</p>
+          </div>
+          <div class="rating"><strong>8</strong><span>відгуків клієнтів</span></div>
+        </div>
+        <div class="reviews">
+          <article class="review">
+            <div class="review-rating"><strong>Відмінно</strong><time datetime="2020-05-18">18.05.2020</time></div>
+            <blockquote>«Приехали, забрали, сделали, привезли. Все очень качественно. Остался очень доволен. Сервис на высшем уровне. Рекомендую!!!»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Гарне обслуговування</li><li>Актуальний опис</li><li>Швидко зв'язались</li><li>Швидко відправили</li><li>Актуальна ціна</li><li>Товар був у наявності</li></ul>
+            <div class="review-person"><span class="avatar" aria-hidden="true">П</span><span><strong>Покупець</strong><small>Купівля від 18.05.2020</small></span></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Відмінно</strong><time datetime="2018-12-17">17.12.2018</time></div>
+            <blockquote>«Отличная компания - надежный партнер, ответственный руководитель. Сложную работу выполнили на отлично, при оформлении заказа получили профессиональную консультацию в выборе оптимального варианта выполнения работы. Внимательны и терпеливы к требованиям заказчика. Комната заиграла по новому - три кресла и диван преобразили ее!!!! Отличная работа, всему коллективу успехов, огромное спасибо! РЕКОМЕНДУЕМ!»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Гарне обслуговування</li><li>Актуальний опис</li><li>Швидко зв'язались</li><li>Швидко відправили</li><li>Актуальна ціна</li><li>Товар був у наявності</li></ul>
+            <div class="review-person"><span class="avatar" aria-hidden="true">П</span><span><strong>Покупець</strong><small>Купівля від 17.12.2018</small></span></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Відмінно</strong><time datetime="2018-11-06">06.11.2018</time></div>
+            <blockquote>«Прекрасная компания, супер ребята. Быстро связались со мной. Предложили варианты оббивки кресла. Согласовали стоимость и сроки. Отдали кресло на день раньше. Результатом ОЧЕНЬ доволен! Рекомендую!»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Гарне обслуговування</li><li>Актуальний опис</li><li>Швидко зв'язались</li><li>Швидко відправили</li><li>Актуальна ціна</li><li>Товар був у наявності</li></ul>
+            <div class="review-person"><span class="avatar">ЄК</span><span><strong>Евгений К.</strong><small>Купівля від 06.11.2018</small></span></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Добре</strong><time datetime="2016-08-24">24.08.2016</time></div>
+            <blockquote>«качественно понравилось»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Актуальний опис</li><li>Швидко відправили</li><li>Актуальна ціна</li><li>Товар був у наявності</li></ul>
+            <div class="review-person"><span class="avatar">П</span><span><strong>Партнер</strong><small>Купівля від 24.08.2016</small></span></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Добре</strong><time datetime="2014-11-23">23.11.2014</time></div>
+            <blockquote>«Огромное спасибо!)))) Осталась очень довольна изготовлением и перетяжкой белой кожи двух спальней кровати. Все пожелания клиента были соблюдены. А так же предложили оригинальную идею с оформлением изголовья кровати (камнями сваровски). Кровать сделана очень качестве)))) Рекомендую, делают добросовестно, быстро и качественно.»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Швидко зв'язались</li><li>Швидко відправили</li><li>Актуальна ціна</li></ul>
+            <div class="review-person"><span class="avatar">ОХ</span><span><strong>Оксана Х.</strong><small>Купівля від 23.11.2014</small></span></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Відмінно</strong><time datetime="2013-04-26">26.04.2013</time></div>
+            <blockquote>«Заказывали перетяжку двух диванов. Работа была сложной, но выполнили ее ребята на отлично. Учли все наши пожелания, были внимательны и терпеливы. И качество работы и качество общения с клиентами - на высоте. Так держать!»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Гарне обслуговування</li></ul>
+            <div class="review-person"><span class="avatar">А</span><span><strong>Алексей</strong><small>Купівля від 26.04.2013</small></span></div>
+            <div class="review-reply"><strong>Коментар продавця<time datetime="2013-11-11">11.11.2013</time></strong><p>Спасибо большое за отзыв! Приятно было с вами сотрудничать!</p></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Відмінно</strong><time datetime="2013-04-09">09.04.2013</time></div>
+            <blockquote>«Молодцы ребята, перетянули кожаный уголок итальянской кожей - стал лучше нового. Все сделали качественно, быстро, в удобное для меня время.»</blockquote>
+            <ul class="review-tags" aria-label="Позначки відгуку"><li>Гарне обслуговування</li></ul>
+            <div class="review-person"><span class="avatar">ДЖ</span><span><strong>Дмитрий Ж.</strong><small>Купівля від 09.04.2013</small></span></div>
+          </article>
+          <article class="review">
+            <div class="review-rating"><strong>Відмінно</strong><time datetime="2013-03-31">31.03.2013</time></div>
+            <blockquote>«В прошлом году перетягивала офисный диван. Работой очень довольна, получился практически новый диван и в новом дизайне. Хорошая работа и не дорого.»</blockquote>
+            <div class="review-person"><span class="avatar">СВ</span><span><strong>Светлана В.</strong><small>Купівля від 31.03.2013</small></span></div>
+            <div class="review-reply"><strong>Коментар продавця<time datetime="2013-11-11">11.11.2013</time></strong><p>Спасибо, что выбрали нашу компанию! Надеемся на дальнейшее сотрудничество с Вами.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vb-h1y">
+      <div class="wrap faq-grid">
+        <div class="faq-intro"><span class="eyebrow">Відповідаємо на головне</span><h2>Часті питання</h2><p>Не знайшли відповідь? Подзвоніть або напишіть — відповімо протягом робочого дня.</p><a class="button button--small" href="tel:+380985479865">Зателефонувати</a></div>
+        <div class="faq-list">
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Скільки коштує перетяжка моїх меблів?</span><span>+</span></button><div class="faq-answer"><div><p>Частина цін наведена в каталозі. Для позицій, де зазначено 1 ₴ або «Ціну уточнюйте», вартість потрібно узгодити телефоном.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Чи потрібно самому доставляти меблі в майстерню?</span><span>+</span></button><div class="faq-answer"><div><p>Ні. По Дніпру забираємо та привозимо меблі безкоштовно. У Дніпропетровській області доставка розраховується індивідуально — зазвичай це 300–800 ₴ залежно від відстані.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Які тканини ви використовуєте?</span><span>+</span></button><div class="faq-answer"><div><p>У каталозі є зразки жакарду, вельвету, рогожки та штучної шкіри. Для оббивки також використовують шеніл, велюр, флок, гобелен, мікрофібру та натуральну шкіру.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Що робите зі старим наповнювачем?</span><span>+</span></button><div class="faq-answer"><div><p>Пінополіуретан і синтепон зазвичай замінюємо на нові — старий матеріал уже не тримає форму. Пружинний блок і каркас відновлюємо: підсилюємо ремені, міняємо кріплення та фурнітуру.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Чи є гарантія на роботу?</span><span>+</span></button><div class="faq-answer"><div><p>Так, 2 роки на всі роботи та матеріали. Гарантійні зобов'язання фіксуємо в договорі. Якщо виникає питання — приїжджаємо та виправляємо безкоштовно.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Скільки часу займає перетяжка?</span><span>+</span></button><div class="faq-answer"><div><p>Стільці та пуфи — 1 день, крісла й куточки — 1–2 дні, дивани — 2–3 дні. Точний термін фіксуємо в кошторисі та дотримуємось його.</p></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="vb-m8j">
+      <div class="wrap contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow">Ми на зв'язку</span>
+          <h2>Контакти майстерні «Твій стиль»</h2>
+          <p>Майстерня працює у Дніпрі. Зателефонуйте або залиште заявку, щоб узгодити замовлення.</p>
+          <ul class="contact-list">
+            <li><span class="contact-icon" aria-hidden="true">●</span><div><strong>Контактна особа</strong><span>Роман</span></div></li>
+            <li><span class="contact-icon" aria-hidden="true">⌖</span><div><strong>Адреса</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9B%D1%96%D0%B2%D0%BE%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B8%D0%B9%2C+%D0%B2%D1%83%D0%BB.%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D0%B0+%D0%97%D0%B0%D1%85%D0%B0%D1%80%D1%87%D0%B5%D0%BD%D0%BA%D0%BE%2C+17%2F1%2C+%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%2C+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0&amp;hl=uk" target="_blank" rel="noopener noreferrer">Лівобережний, вул. Генерала Захарченко, 17/1, Дніпро, Україна</a></div></li>
+            <li><span class="contact-icon" aria-hidden="true">☎</span><div><strong>Телефон</strong><a href="tel:+380985479865">+380 (98) 547-98-65</a><br><a href="tel:+380959087508">+380 (95) 908-75-08</a></div></li>
+            <li><span class="contact-icon" aria-hidden="true">✉</span><div><strong>Email</strong><a href="mailto:kapustin.mebel@gmail.com">kapustin.mebel@gmail.com</a></div></li>
+            <li><span class="contact-icon" aria-hidden="true">◷</span><div><strong>Графік роботи</strong><span>Щодня: 09:00–18:00</span></div></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <h3>Розрахувати вартість перетяжки</h3>
+          <div class="field"><label for="name">Ваше ім'я</label><input id="name" name="name" autocomplete="name" placeholder="Наприклад, Олена" required></div>
+          <div class="field"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+38 (0__) ___-__-__" required></div>
+          <div class="field"><label for="furniture">Тип меблів</label><select id="furniture" name="furniture" required><option value="">Оберіть варіант</option><option>М'які меблі</option><option>Ремонт меблів</option><option>Офісні меблі</option><option>Матрац</option><option>Автомобільний салон</option><option>Модульні меблі</option><option>Інше</option></select></div>
+          <div class="field"><label for="comment">Коментар</label><textarea id="comment" name="comment" placeholder="Опишіть меблі: розмір, механізм, бажану тканину"></textarea></div>
+          <label class="consent"><input type="checkbox" required><span>Погоджуюсь на обробку персональних даних для зв'язку щодо заявки</span></label>
+          <button class="button" type="submit">Надіслати заявку</button>
+          <p class="form-note" id="form-note" aria-live="polite">Заявка відкриється у WhatsApp для підтвердження відправлення.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Твій <span>стиль</span></div><p>Майстерня з перетяжки та ремонту м'яких меблів у Дніпрі та Дніпропетровській області. Понад 12 років досвіду, власна майстерня, гарантія 2 роки на всі роботи.</p></div>
+        <div><h3>Послуги</h3><nav class="footer-links" aria-label="Послуги"><a href="#vb-c9r">Перетяжка диванів</a><a href="#vb-c9r">Перетяжка крісел</a><a href="#vb-c9r">Стільці та табуретки</a><a href="#vb-c9r">Кухонні куточки</a><a href="#vb-s8q">Ціни</a></nav></div>
+        <div><h3>Контакти</h3><nav class="footer-links" aria-label="Контакти"><a href="tel:+380985479865">+380 (98) 547-98-65</a><a href="tel:+380959087508">+380 (95) 908-75-08</a><span>Роман · майстерня у Дніпрі</span><a href="#vb-m8j">Лівобережний, вул. Генерала Захарченко, 17/1</a><a href="mailto:kapustin.mebel@gmail.com">kapustin.mebel@gmail.com</a><span>Щодня: 09:00–18:00</span><a href="#vb-m8j">Залишити заявку</a></nav></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Майстерня «Твій стиль». Усі права захищено.</span><span>Перетяжка м'яких меблів — Дніпро та Дніпропетровська область</span></div>
+    </div>
+  </footer>
+  <a class="help-bubble" href="#vb-m8j" aria-label="Поставити запитання">?</a>
+  <button class="back-top" type="button" aria-label="На початок сторінки">↑</button>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    menuToggle.addEventListener("click", () => {
+      const open = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(open));
+      nav.classList.toggle("open", open);
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      nav.classList.remove("open");
+    }));
+
+    document.querySelectorAll("[data-filter-group]").forEach(group => {
+      group.addEventListener("click", event => {
+        const button = event.target.closest("button[data-filter]");
+        if (!button) return;
+        group.querySelectorAll("button[data-filter]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+        const filter = button.dataset.filter;
+        if (group.dataset.filterGroup === "products") {
+          let visible = 0;
+          document.querySelectorAll(".product-card").forEach(card => {
+            const show = filter === "all" || card.dataset.category === filter;
+            card.hidden = !show;
+            if (show) visible += 1;
+          });
+          const plural = new Intl.PluralRules("uk").select(visible);
+          const noun = plural === "one" ? "позиція" : plural === "few" ? "позиції" : "позицій";
+          document.querySelector("#product-count").textContent = `${visible} ${noun}`;
+        } else {
+          document.querySelectorAll(".fabric-card").forEach(card => {
+            card.hidden = filter !== "all" && !card.dataset.tags.split(" ").includes(filter);
+          });
+        }
+      });
+    });
+
+    const serviceDetails = {
+      upholstery: {
+        title: "Перетяжка м'яких меблів",
+        furniture: "М'які меблі",
+        description: "Перетяжка м'яких меблів допомагає оновити інтер'єр і повернути улюбленим меблям охайний вигляд. Майстер допоможе підібрати тканину та колір із великого асортименту матеріалів. За потреби можна замінити не лише оббивку, а й внутрішні наповнювачі, пружинні блоки або несправні деталі. Перетяжка часто обходиться дешевше, ніж купівля нового гарнітура; майстерня працює у цій сфері понад 12 років.",
+        steps: ["Оглядаємо меблі, обговорюємо тканину, колір і потрібні роботи.", "Узгоджуємо обсяг, вартість і терміни; знімаємо стару оббивку та готуємо меблі.", "Виконуємо перетяжку, збираємо меблі й перевіряємо результат."]
+      },
+      leather: {
+        title: "Оббивка меблів шкірою",
+        furniture: "М'які меблі",
+        description: "Можна оновити меблі оббивкою зі шкіри або шкірозамінника. Майстер допоможе підібрати матеріал і колір, щоб нова оббивка пасувала до інтер'єру. Майстерня виконує замовлення різної складності, а за потреби поєднує заміну оббивки з ремонтом або частковим відновленням меблів.",
+        steps: ["Оцінюємо конструкцію та стан меблів, добираємо матеріал і колір.", "Готуємо деталі оббивки за формою меблів і за потреби ремонтуємо основу.", "Закріплюємо нову оббивку, збираємо меблі та перевіряємо шви й посадку."]
+      },
+      repair: {
+        title: "Ремонт м'яких меблів",
+        furniture: "Ремонт меблів",
+        description: "Майстерня виконує ремонт і перетяжку м'яких меблів. Можна відновити внутрішні наповнювачі, відремонтувати застарілі механізми, замінити пружинний блок або дрібні деталі, що вийшли з ладу. Після огляду узгоджуються потрібні роботи та їхня вартість. На виконану роботу надається гарантія.",
+        steps: ["Оглядаємо меблі та визначаємо несправні або зношені елементи.", "Узгоджуємо перелік ремонту, матеріали та вартість.", "Відновлюємо потрібні деталі, збираємо меблі та перевіряємо їхню роботу."]
+      },
+      restoration: {
+        title: "Реставрація меблів",
+        furniture: "Ремонт меблів",
+        description: "Реставруємо м'які меблі, змінюємо їхній дизайн і допомагаємо повернути охайний вигляд. Працюємо із замовленнями різної складності, підбираємо оббивні тканини та погоджуємо обсяг відновлення після огляду. Реставрація дає змогу зберегти улюблені меблі й часто заощадити порівняно з купівлею нових.",
+        steps: ["Оглядаємо меблі й обговорюємо, який результат потрібно отримати.", "Погоджуємо роботи: ремонт основи, заміну наповнювача чи оббивки та інші необхідні відновлення.", "Виконуємо погоджені роботи й перевіряємо готові меблі."]
+      },
+      "hairdresser-chair-upholstery": {
+        title: "Перетяжка перукарських крісел",
+        furniture: "Офісні меблі",
+        description: "Перукарські крісла належать до спеціалізованих меблів, з якими працює майстерня. Можна оновити зношену оббивку, обрати нову тканину або шкірозамінник і за потреби поєднати перетяжку з ремонтом внутрішніх деталей. Перелік робіт та матеріал узгоджуються після огляду крісла.",
+        steps: ["Оглядаємо крісло, його оббивку та рухомі частини.", "Узгоджуємо матеріал, колір і необхідність ремонту.", "Замінюємо оббивку, збираємо крісло та перевіряємо його стан."]
+      },
+      "office-chair-upholstery": {
+        title: "Перетяжка офісних крісел",
+        furniture: "Офісні меблі",
+        description: "Майстерня виконує перетяжку офісних крісел, а також ремонт і відновлення м'яких елементів. Можна підібрати новий матеріал та колір, а за потреби узгодити заміну зношеного наповнювача або ремонт несправних деталей. Обсяг робіт визначається після огляду крісла.",
+        steps: ["Оглядаємо крісло та визначаємо, які частини потребують оновлення.", "Підбираємо матеріал і погоджуємо вартість робіт.", "Оновлюємо оббивку, збираємо крісло та перевіряємо результат."]
+      },
+      "chair-upholstery": {
+        title: "Оббивка стільців",
+        furniture: "М'які меблі",
+        description: "Оновлюємо оббивку м'яких сидінь і спинок стільців. Можна замовити перетяжку одного виробу або кількох стільців комплектом, обравши тканину та колір із доступних зразків. Якщо наповнювач зносився, його заміну можна погодити разом з оббивкою.",
+        steps: ["Оглядаємо стільці та рахуємо кількість елементів для оббивки.", "Погоджуємо тканину, колір, наповнювач і обсяг роботи.", "Перетягуємо сидіння або спинки та перевіряємо кожен стілець."]
+      },
+      "hairdresser-chair": {
+        title: "Виготовлення перукарських крісел",
+        furniture: "Офісні меблі",
+        description: "Виготовлення перукарських крісел входить до переліку послуг майстерні. Перед замовленням обговорюються потрібні розміри, конструкція, матеріали та оббивка. Остаточний перелік робіт, вартість і терміни узгоджуються індивідуально.",
+        steps: ["Уточнюємо побажання щодо вигляду, розмірів і комплектації.", "Погоджуємо конструкцію, матеріали, вартість і терміни.", "Виготовляємо крісло за узгодженими параметрами та перевіряємо готовий виріб."]
+      },
+      "massage-table": {
+        title: "Оббивка масажного столу",
+        furniture: "М'які меблі",
+        description: "Майстерня працює зі спеціалізованими меблями та обладнанням, зокрема з масажними столами. Можна замінити зношену оббивку, підібрати матеріал і за потреби погодити оновлення м'якого наповнювача. Обсяг робіт визначається після огляду виробу.",
+        steps: ["Оглядаємо стіл і визначаємо стан оббивки та наповнювача.", "Погоджуємо матеріал, колір і потрібний обсяг робіт.", "Оновлюємо поверхню оббивки та перевіряємо її кріплення."]
+      },
+      covers: {
+        title: "Пошиття чохлів і подушок",
+        furniture: "Інше",
+        description: "Майстерня шиє чохли для меблів і автомобільних сидінь, а також чохли та наволочки для подушок. Перед пошиттям узгоджуються розміри, тканина, колір, форма та побажання до деталей. Майстер допоможе підібрати матеріал із доступних зразків.",
+        steps: ["Знімаємо мірки або уточнюємо розміри виробу та подушок.", "Погоджуємо тканину, дизайн, застібки й інші побажання.", "Кроїмо та шиємо чохли й наволочки, після чого перевіряємо посадку."]
+      },
+      auto: {
+        title: "Перетяжка автомобільних крісел",
+        furniture: "Автомобільний салон",
+        description: "Виконуємо перетяжку автомобільних сидінь та оновлюємо оббивку салону. Також можна замовити пошиття чохлів на автосидіння. Матеріал, колір і перелік деталей погоджуються перед початком робіт.",
+        steps: ["Оглядаємо крісла та визначаємо частини, які потрібно перетягнути.", "Узгоджуємо матеріал, колір і обсяг робіт.", "Виконуємо перетяжку та перевіряємо встановлену оббивку."]
+      },
+      springs: {
+        title: "Заміна пружинних блоків",
+        furniture: "Ремонт меблів",
+        description: "Якщо меблі просіли або пружини вийшли з ладу, можна замінити пружинний блок і за потреби відновити інші внутрішні елементи. Майстер огляне меблі, визначить обсяг ремонту та узгодить матеріали й вартість до початку робіт.",
+        steps: ["Оглядаємо меблі та визначаємо, чи потрібна заміна пружинного блока.", "Погоджуємо потрібні матеріали та обсяг ремонту.", "Замінюємо блок, відновлюємо внутрішні шари й збираємо меблі."]
+      },
+      foam: {
+        title: "Заміна поролону",
+        furniture: "Ремонт меблів",
+        description: "Зношений внутрішній наповнювач меблів можна замінити, щоб повернути сидінням, спинкам або підлокітникам комфорт і форму. Майстер огляне виріб, узгодить необхідний матеріал і пояснить, які елементи доцільно відновити разом із наповнювачем.",
+        steps: ["Оглядаємо м'які елементи та визначаємо місця, де наповнювач втратив форму.", "Погоджуємо тип і товщину нового наповнювача.", "Замінюємо поролон і збираємо меблі з оббивкою."]
+      },
+      mattress: {
+        title: "Виготовлення матраців",
+        furniture: "Матрац",
+        description: "Виготовляємо матраци на замовлення. Купуючи готову модель у магазині, доводиться обирати серед наявних типів тканини, наповнювачів, жорсткості та товщини. Для матраца на замовлення ці параметри можна узгодити індивідуально: враховуються потрібні розміри, вага та побажання щодо жорсткості й наповнення.",
+        steps: ["Уточнюємо розміри, бажану висоту та призначення матраца.", "Обговорюємо внутрішнє наповнення й матеріал чохла.", "Виготовляємо матрац за погодженими параметрами та перевіряємо готовий виріб."]
+      },
+      "mattress-repair": {
+        title: "Ремонт матраців",
+        furniture: "Матрац",
+        description: "Майстерня виконує ремонт матраців. Спочатку потрібно оглянути матрац і визначити, які внутрішні елементи або частини оббивки потребують відновлення. Можливість ремонту, перелік робіт і вартість узгоджуються індивідуально.",
+        steps: ["Оглядаємо матрац і з'ясовуємо характер пошкодження.", "Пояснюємо можливий спосіб ремонту та погоджуємо його обсяг.", "Виконуємо узгоджене відновлення й перевіряємо матрац."]
+      },
+      "folding-bed": {
+        title: "Французькі розкладачки під замовлення",
+        furniture: "Інше",
+        description: "Майстерня виконує роботи з французькими розкладачками, зокрема їхню заміну або виготовлення під замовлення. Після огляду узгоджуються потрібний варіант, матеріали, вартість і терміни.",
+        steps: ["Уточнюємо розміри, призначення та побажання до конструкції.", "Погоджуємо матеріали, комплектацію, вартість і термін.", "Виготовляємо розкладачку за узгодженими параметрами та перевіряємо її."]
+      }
+    };
+
+    const serviceDialog = document.querySelector("#service-dialog");
+    const serviceTitle = document.querySelector("#service-dialog-title");
+    const serviceDescription = document.querySelector("#service-dialog-description");
+    const serviceSteps = document.querySelector("#service-dialog-steps");
+    let selectedService = null;
+
+    document.querySelectorAll(".service-link").forEach(button => button.addEventListener("click", () => {
+      selectedService = serviceDetails[button.dataset.service];
+      if (!selectedService) throw new Error(`Missing service details for "${button.dataset.service}"`);
+      serviceTitle.textContent = selectedService.title;
+      serviceDescription.textContent = selectedService.description;
+      serviceSteps.replaceChildren(...selectedService.steps.map(step => {
+        const item = document.createElement("li");
+        item.textContent = step;
+        return item;
+      }));
+      serviceDialog.showModal();
+    }));
+
+    document.querySelector(".service-dialog-close").addEventListener("click", () => serviceDialog.close());
+    serviceDialog.addEventListener("click", event => {
+      if (event.target === serviceDialog) serviceDialog.close();
+    });
+    document.querySelector("#service-dialog-order").addEventListener("click", () => {
+      if (!selectedService) return;
+      document.querySelector("#furniture").value = selectedService.furniture;
+      document.querySelector("#comment").value = selectedService.title;
+      serviceDialog.close();
+      document.querySelector("#vb-m8j").scrollIntoView({ behavior: "smooth" });
+      window.setTimeout(() => document.querySelector("#name").focus({ preventScroll: true }), 550);
+    });
+
+    document.querySelectorAll(".faq-question").forEach(button => button.addEventListener("click", () => {
+      button.setAttribute("aria-expanded", String(button.getAttribute("aria-expanded") !== "true"));
+    }));
+
+    document.querySelectorAll(".order-button").forEach(button => button.addEventListener("click", () => {
+      const typeByCategory = {
+        upholstery: "М'які меблі",
+        repair: "Ремонт меблів",
+        office: "Офісні меблі",
+        mattresses: "Матрац",
+        auto: "Автомобільний салон",
+        custom: "Модульні меблі"
+      };
+      document.querySelector("#furniture").value = typeByCategory[button.closest(".product-card").dataset.category];
+      document.querySelector("#comment").value = button.dataset.item;
+      document.querySelector("#vb-m8j").scrollIntoView({ behavior: "smooth" });
+      window.setTimeout(() => document.querySelector("#name").focus({ preventScroll: true }), 550);
+    }));
+
+    document.querySelector("#contact-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const message = [
+        "Заявка на перетяжку меблів",
+        `Ім'я: ${form.get("name")}`,
+        `Телефон: ${form.get("phone")}`,
+        `Тип меблів: ${form.get("furniture")}`,
+        form.get("comment") ? `Коментар: ${form.get("comment")}` : ""
+      ].filter(Boolean).join("\n");
+      document.querySelector("#form-note").textContent = "Відкриваємо WhatsApp — перевірте повідомлення та надішліть його майстерні.";
+      window.open(`https://wa.me/380985479865?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    });
+
+    const backTop = document.querySelector(".back-top");
+    window.addEventListener("scroll", () => backTop.classList.toggle("visible", window.scrollY > 500), { passive: true });
+    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
+</body>
+</html>
